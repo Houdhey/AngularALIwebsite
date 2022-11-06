@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { QuizComponent } from './components/quiz/quiz.component';
+import { LobbyComponent } from './components/lobby/lobby.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'quiz',
     component: QuizComponent,
+  },
+  {
+    path: 'lobby',
+    component: LobbyComponent,
   },
 ];
 

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "chatapp-f7209"
+  },
+  "targets": {
+    "chatapp-f7209": {
+      "hosting": {
+        "app": [
+          "chatapp-f7209"
+        ]
+      }
+    }
+  }
+}

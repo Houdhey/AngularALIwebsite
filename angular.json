@@ -30,7 +30,10 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": [],
             "aot": false,
             "vendorChunk": true,
@@ -119,7 +122,10 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         },
         "e2e": {
@@ -136,12 +142,24 @@
               "devServerTarget": "app:serve:ci"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "app:build:production",
+            "firebaseProject": "chatapp-f7209",
+            "firebaseHostingSite": "chatapp-f7209"
+          }
         }
       }
     }
   },
   "cli": {
-    "schematicCollections": ["@ionic/angular-toolkit"],
+    "schematicCollections": [
+      "@ionic/angular-toolkit"
+    ],
     "analytics": false
   },
   "schematics": {
