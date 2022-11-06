@@ -8,9 +8,7 @@
         <span></span>
       </div>
     </div>
-    <div class="header-title">
-      Home
-    </div>
+    <div class="header-title">Home</div>
     <div class="header-buttons">
       <button class="notifications">
         <i class="ai-bell"></i>
@@ -30,7 +28,6 @@
         <i class="ai-search"></i>
       </button>
       <input type="text" class="search-input" placeholder="Search Music" />
-
     </div>
   </section>
 
@@ -41,12 +38,13 @@
     <a href="#" class="navigation-item">Artists</a>
   </nav>
   <section class="playlists">
-
     <article class="card">
       <div class="card-inner">
         <span class="card-pin"></span>
         <div class="card-image">
-          <img src="https://assets.codepen.io/285131/illustration-hand-with-cigarette-icon.jpg" />
+          <img
+            src="https://assets.codepen.io/285131/illustration-hand-with-cigarette-icon.jpg"
+          />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -64,7 +62,9 @@
       <div class="card-inner">
         <span class="card-pin"></span>
         <div class="card-image">
-          <img src="https://assets.codepen.io/285131/hand-drawn-monster-milkshake.jpg" />
+          <img
+            src="https://assets.codepen.io/285131/hand-drawn-monster-milkshake.jpg"
+          />
         </div>
         <div class="card-content">
           <div class="card-meta">
@@ -79,42 +79,42 @@
     </article>
   </section>
   <section class="currently-playing">
-
     <article class="card horizontal">
       <div class="card-inner">
         <span class="card-pin simple"></span>
         <div class="card-image">
-          <img src="https://assets.codepen.io/285131/pink-pastel-juicy-banana.jpg" />
+          <img
+            src="https://assets.codepen.io/285131/pink-pastel-juicy-banana.jpg"
+          />
         </div>
         <div class="card-content">
           <div class="card-meta">
             <span class="card-meta-artist">Marshmello</span>
-            <button class="card-meta-button" style="opacity: 0;">
+            <button class="card-meta-button" style="opacity: 0">
               <i class="ai-circle-triangle-right-fill"></i>
             </button>
           </div>
-          <h2 class="card-title">Hate the Other Side
+          <h2 class="card-title">
+            Hate the Other Side
             <span class="card-time">3:40</span>
           </h2>
         </div>
         <span class="card-pin simple"></span>
       </div>
     </article>
-
-
   </section>
   <div class="menu">
     <div class="menu-inner">
       <a class="menu-item active">
         <ion-icon name="airplane-outline"></ion-icon>
       </a>
-      <a  class="menu-item">
+      <a class="menu-item" (click)="navigate('/quiz')">
         <ion-icon name="airplane-outline"></ion-icon>
       </a>
-      <a  class="menu-item">
+      <a class="menu-item">
         <ion-icon name="airplane-outline"></ion-icon>
       </a>
-      <a  class="menu-item">
+      <a class="menu-item">
         <ion-icon name="airplane-outline"></ion-icon>
       </a>
     </div>
