@@ -1,0 +1,27 @@
+<div class="player">
+  <div class="record">
+    <div class="label"></div>
+  </div>
+  <div class="stick">
+    <div class="screw"></div>
+  </div>
+  <button class="power" (click)="powerClick()"></button>
+  <div class="slidecontainer">
+    <input
+      (change)="volumeSlide()"
+      type="range"
+      class="slider"
+      id="volume"
+      min="0"
+      max="1"
+      step="0.1"
+      value="0.3"
+    />
+  </div>
+</div>
+<audio
+  loop
+  class="mysong"
+  src="https://firebasestorage.googleapis.com/v0/b/ali-firebase.appspot.com/o/Street%20Fighter%20-%20Kens%20Theme%20%20Epic%20Rock%20Cover.mp3?alt=media&token=8c8c2385-052e-43c8-850d-92435b0ea882"
+  preload="auto"
+></audio>

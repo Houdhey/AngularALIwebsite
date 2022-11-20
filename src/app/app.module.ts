@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
@@ -19,9 +17,25 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideMessaging, getMessaging } from '@angular/fire/messaging';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { AudioPlayerComponent } from './components/audio-player/audio-player.component';
+import { LobbyComponent } from './components/lobby/lobby.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { QuizComponent } from './components/quiz/quiz.component';
+import { NavbarnewComponent } from './testFactory/navbarnew/navbarnew.component';
+import { NavBarDynamicComponent } from './testFactory/nav-bar-dynamic/nav-bar-dynamic.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AudioPlayerComponent,
+    LobbyComponent,
+    NavbarComponent,
+    QuizComponent,
+    NavbarnewComponent,
+    NavBarDynamicComponent,
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -40,5 +54,6 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
     UserTrackingService,
   ],
   bootstrap: [AppComponent],
+  exports: [],
 })
 export class AppModule {}

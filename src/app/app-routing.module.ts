@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { LobbyComponent } from './components/lobby/lobby.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavBarDynamicComponent } from './testFactory/nav-bar-dynamic/nav-bar-dynamic.component';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
+    component: HomeComponent,
   },
   {
     path: '',
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'lobby',
     component: LobbyComponent,
+  },
+  {
+    path: 'test',
+    component: NavBarDynamicComponent,
   },
 ];
 

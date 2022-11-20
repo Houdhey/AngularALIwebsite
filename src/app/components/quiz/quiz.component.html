@@ -12,7 +12,14 @@
   </div>
 </section>
 -->
-<div style="background-color: #2ab3c0; width: 100%; height: 100%">
+<div
+  style="
+    background-image: url('assets/arabic/cloudy.svg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  "
+>
   <div style="display: flex">
     <div
       style="
@@ -22,26 +29,24 @@
         justify-content: left;
       "
     >
-      <div
-        style="
-          height: 80px;
-          width: 80px;
-          border-radius: 40px;
-          background-image: url('https://i.pinimg.com/originals/34/16/65/341665199bb597cdfae9848f975b844f.jpg');
-          background-size: cover;
-          text-align: left;
-          border: solid 3px white;
-        "
-      ></div>
-      <div
-        style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden"
-      >
+      <div class="avatar"></div>
+      <div style="word-break: break-word; text-align: center">
         PLAYER 1 Name
       </div>
     </div>
-    <div style="width: 20%; justify-content: center; text-align: center">
-      Time left : 20s
+    <div
+      style="
+        width: 20%;
+        justify-content: center;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+      "
+    >
+      Time left
+      <div>20s</div>
     </div>
+
     <div
       style="
         display: flex;
@@ -50,21 +55,95 @@
         justify-content: right;
       "
     >
-      <div
-        style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden"
-      >
+      <div style="word-break: break-word; text-align: center">
         PLAYER 2 Name
       </div>
+      <div class="avatar"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: center; margin-top: 10px">
+    <div class="card">
+      <div class="card-inner">
+        <span class="card-pin"></span>
+        <div
+          style="
+            height: 200px;
+            background-image: url('assets/lobby1.jpg');
+            background-size: cover;
+            border-radius: 20px;
+          "
+        ></div>
+        <div class="card-content">
+          <div>Thème : Ta mère</div>
+        </div>
+      </div>
+    </div>
+    <!--    <div
+      style="
+        position: relative;
+        width: 90%;
+        height: 200px;
+        padding: 20px;
+        background: floralwhite;
+        background-size: cover;
+        background-position: bottom;
+      "
+    >
+      <img
+        class="upper_left"
+        src="assets/arabic/corner.png"
+        style="height: 50px; width: 50px"
+      />
+      <img
+        class="upper_right"
+        src="assets/arabic/corner.png"
+        style="height: 50px; width: 50px; transform: rotate(90deg)"
+      />
+
+      <img
+        class="lower_right"
+        src="assets/arabic/corner.png"
+        style="height: 50px; width: 50px; transform: rotate(180deg)"
+      />
+
+      <img
+        class="lower_left"
+        src="assets/arabic/corner.png"
+        style="height: 50px; width: 50px; transform: rotate(270deg)"
+      />
       <div
         style="
-          height: 80px;
-          width: 80px;
-          border-radius: 40px;
-          background-image: url('https://i.pinimg.com/originals/34/16/65/341665199bb597cdfae9848f975b844f.jpg');
-          background-size: cover;
-          border: solid 3px white;
+          font-family: hidayatullah, sans-serif;
+          font-size: 30px;
+          color: #232243;
         "
-      ></div>
+      >
+        Quel est le prénom du prophète (SWS) ?
+      </div>
+    </div>-->
+  </div>
+  <div class="card horizontal">
+    <div class="card-inner">
+      <span class="card-pin simple"></span>
+      <div class="card-image">
+        <img
+          src="https://assets.codepen.io/285131/pink-pastel-juicy-banana.jpg"
+        />
+      </div>
+      <div class="card-content">
+        <div class="card-meta">
+          <span class="card-meta-artist">Marshmello</span>
+          <button class="card-meta-button" style="opacity: 0">
+            <i class="ai-circle-triangle-right-fill"></i>
+          </button>
+        </div>
+        <h2 class="card-title">
+          Hate the Other Side
+          <span class="card-time">3:40</span>
+        </h2>
+      </div>
+      <span class="card-pin simple"></span>
     </div>
   </div>
 </div>

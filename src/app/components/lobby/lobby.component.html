@@ -1,13 +1,35 @@
 <div class="global-container">
-  <div id="game-container" class="game-container"></div>
+  <div class="ff7">
+    <p>{{ lastMessage }}</p>
+  </div>
+  <div style="position: absolute; bottom: 0">
+    <input
+      class="buscar-barra"
+      id="chatInput"
+      placeholder="Ecrire un message"
+      type="text"
+      (change)="userChatting($event)"
+    />
+  </div>
 
-  <div class="player-info">
+  <div
+    *ngIf="!isUserConnected"
+    id="game-container"
+    class="game-container"
+  ></div>
+
+  <!--  <div class="player-info">
     <div>
       <label for="player-name">Your Name</label>
-      <input id="player-name" maxlength="10" type="text" />
+      <input
+        id="player-name"
+        (change)="onNameChange()"
+        maxlength="10"
+        type="text"
+      />
     </div>
     <div>
-      <button id="player-color">Change Color</button>
+      <button id="player-color" (click)="changeColor()">Change Color</button>
     </div>
-  </div>
+  </div>-->
 </div>
