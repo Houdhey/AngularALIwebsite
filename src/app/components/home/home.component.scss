@@ -32,11 +32,10 @@ button {
   border-radius: 25px;
   padding: 2rem;
   box-shadow: 0 0 0 10px #e9ebec, 0 0 0 11px #fcfdfe;
-  background-color: #fff;
   position: relative;
-  z-index: 1;
   margin-left: auto;
   margin-right: auto;
+  background-color: #ffb687;
 }
 
 .header {
@@ -250,7 +249,7 @@ button {
   padding-bottom: 0.75rem;
   border-bottom: 1px solid #1d1d1d;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .navigation-item {
