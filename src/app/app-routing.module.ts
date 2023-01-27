@@ -4,6 +4,7 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { LobbyComponent } from './components/lobby/lobby.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavBarDynamicComponent } from './testFactory/nav-bar-dynamic/nav-bar-dynamic.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: 'quiz',
