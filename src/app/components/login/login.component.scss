@@ -1,0 +1,44 @@
+.input-design {
+  height: 50px;
+  background: linear-gradient(to right, #b9c2ee, #a8b4e9, #8898e3);
+  width: 65%;
+  border-radius: 10px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.button-design {
+  height: 50px;
+  background: linear-gradient(to right, #2a3a5a, #556387, #3b5197);
+  margin-left: 90px;
+  margin-right: 90px;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-family: arabetics, serif;
+  font-weight: bold;
+  font-size: 30px;
+  box-shadow: 0 7px 10px black;
+}
+
+.title-text {
+  font-family: arabetics, serif;
+  color: white;
+
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.circle-header {
+  height: 50%;
+  background-image: url("../../../assets/arabic/arabicCityy.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  left: -5%;
+  width: 110%;
+  position: absolute;
+  top: -20%;
+  box-shadow: 0 0 20px black;
+}
