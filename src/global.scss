@@ -39,3 +39,27 @@
   font-family: Kanit;
   src: url(assets/fonts/Kanit-Regular.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: RotundaThin;
+  src: url(assets/fonts/rotula/Fontspring-DEMO-2a-rotunda-thin.otf)
+    format("opentype");
+}
+
+@font-face {
+  font-family: RotundaLight;
+  src: url(assets/fonts/rotula/Fontspring-DEMO-3a-rotunda-light.otf)
+    format("opentype");
+
+  @font-face {
+    font-family: RotundaRegular;
+    src: url(assets/fonts/rotula/Fontspring-DEMO-4a-rotunda-regular.otf)
+      format("opentype");
+  }
+
+  @font-face {
+    font-family: RotundaMedium;
+    src: url(assets/fonts/rotula/Fontspring-DEMO-5a-rotunda-medium.otf)
+      format("opentype");
+  }
+}
