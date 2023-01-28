@@ -10,8 +10,8 @@
 .button-design {
   height: 50px;
   background: linear-gradient(to right, #2a3a5a, #556387, #3b5197);
-  margin-left: 90px;
-  margin-right: 90px;
+  margin-left: 60px;
+  margin-right: 60px;
   border-radius: 30px;
   color: white;
   text-align: center;
@@ -41,4 +41,55 @@
   position: absolute;
   top: -20%;
   box-shadow: 0 0 20px black;
+}
+
+// PLACE HOLDER
+
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari/Edge */
+  /*styles here*/
+  font-family: Kanit, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  /*styles here*/
+  font-family: Kanit, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+input:-ms-input-placeholder {
+  /* IE 10+ */
+  /*styles here*/
+  font-family: Kanit, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  opacity: 1; /*Firefox by default has an opacity object that usually is ideal to reset so it matches webkit*/
+  /*styles here*/
+  font-family: Kanit, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+input:-moz-placeholder {
+  /* Firefox 18- */
+  opacity: 1; /*Firefox by default has an opacity object that usually is ideal to reset so it matches webkit*/
+  /*styles here*/
+  font-family: Kanit, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+input::placeholder {
+  /*styles here*/
+  font-family: Kanit, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
