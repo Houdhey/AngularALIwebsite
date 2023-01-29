@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ModalController, ModalOptions } from '@ionic/angular';
 import { OtpComponent } from '../otp/otp.component';
+import { NgOtpInputModule } from 'ng-otp-input';
 
 @Component({
   selector: 'app-login',

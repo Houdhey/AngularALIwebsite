@@ -27,6 +27,7 @@ import { NavBarDynamicComponent } from './testFactory/nav-bar-dynamic/nav-bar-dy
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { OtpComponent } from './components/otp/otp.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { NgOtpInputModule } from 'ng-otp-input';
     NavbarnewComponent,
     NavBarDynamicComponent,
     LoginComponent,
+    OtpComponent,
   ],
   imports: [
     BrowserModule,
