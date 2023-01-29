@@ -34,6 +34,20 @@
     Se connecter
   </div>
   <div id="recaptcha-container"></div>
+  <button (click)="sendLoginCode()">SMS Text Login Code</button>
+  <div>
+    <hr />
+    <label>Enter your Verification Code Here</label><br />
+    <input type="text" name="code" [(ngModel)]="verificationCode" />
+
+    <button (click)="verifyLoginCode()">Verify</button>
+  </div>
+
+  <div *ngIf="user">
+    You have successfully logged in with your phone number! UserId:
+    {{ user?.uid }}
+  </div>
+
   <div
     style="
       font-family: RotundaLight, serif;
