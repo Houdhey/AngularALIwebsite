@@ -22,22 +22,18 @@
   </div>
   <div style="text-align: center">
     <input
+      id="userPhone"
+      type="number"
       class="input-design"
-      placeholder="Numéro d'adhérant"
+      placeholder="Numéro de téléphone"
       style="margin-top: 10px"
     />
   </div>
 
-  <div style="text-align: center">
-    <input
-      class="input-design"
-      placeholder="Mot de passe"
-      style="margin-top: 30px"
-    />
+  <div (click)="connect()" class="button-design" style="margin-top: 50px">
+    Se connecter
   </div>
-
-  <div class="button-design" style="margin-top: 50px">Se connecter</div>
-
+  <div id="recaptcha-container"></div>
   <div
     style="
       font-family: RotundaLight, serif;

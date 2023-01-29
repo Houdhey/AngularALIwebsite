@@ -24,7 +24,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { NavbarnewComponent } from './testFactory/navbarnew/navbarnew.component';
 import { NavBarDynamicComponent } from './testFactory/nav-bar-dynamic/nav-bar-dynamic.component';
-import { LoginComponent } from "./components/login/login.component";
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { LoginComponent } from "./components/login/login.component";
     QuizComponent,
     NavbarnewComponent,
     NavBarDynamicComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
