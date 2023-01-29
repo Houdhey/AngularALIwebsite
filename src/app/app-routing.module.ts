@@ -5,6 +5,7 @@ import { LobbyComponent } from './components/lobby/lobby.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavBarDynamicComponent } from './testFactory/nav-bar-dynamic/nav-bar-dynamic.component';
 import { LoginComponent } from './components/login/login.component';
+import { OtpComponent } from './components/otp/otp.component';
 
 const routes: Routes = [
   {
@@ -30,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'test',
-    component: NavBarDynamicComponent,
+    component: OtpComponent,
   },
 ];
 

@@ -25,7 +25,8 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { NavbarnewComponent } from './testFactory/navbarnew/navbarnew.component';
 import { NavBarDynamicComponent } from './testFactory/nav-bar-dynamic/nav-bar-dynamic.component';
 import { LoginComponent } from './components/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgOtpInputModule } from 'ng-otp-input';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    NgOtpInputModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
@@ -51,6 +53,7 @@ import { FormsModule } from '@angular/forms';
     provideMessaging(() => getMessaging()),
     provideStorage(() => getStorage()),
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

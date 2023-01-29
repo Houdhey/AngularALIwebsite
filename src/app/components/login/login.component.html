@@ -20,34 +20,23 @@
   >
     Connectez vous à votre compte ACMAL
   </div>
-  <div style="text-align: center">
-    <input
-      id="userPhone"
-      type="number"
-      class="input-design"
-      placeholder="Numéro de téléphone"
-      style="margin-top: 10px"
-    />
-  </div>
+  <form [formGroup]="form">
+    <div id="sign-in-button"></div>
+    <div style="text-align: center">
+      <input
+        formControlName="phone"
+        id="userPhone"
+        type="number"
+        class="input-design"
+        placeholder="Numéro de téléphone"
+        style="margin-top: 10px"
+      />
+    </div>
 
-  <div (click)="connect()" class="button-design" style="margin-top: 50px">
-    Se connecter
-  </div>
-  <div id="recaptcha-container"></div>
-  <button (click)="sendLoginCode()">SMS Text Login Code</button>
-  <div>
-    <hr />
-    <label>Enter your Verification Code Here</label><br />
-    <input type="text" name="code" [(ngModel)]="verificationCode" />
-
-    <button (click)="verifyLoginCode()">Verify</button>
-  </div>
-
-  <div *ngIf="user">
-    You have successfully logged in with your phone number! UserId:
-    {{ user?.uid }}
-  </div>
-
+    <div (click)="signIn()" class="button-design" style="margin-top: 50px">
+      Se connecter
+    </div>
+  </form>
   <div
     style="
       font-family: RotundaLight, serif;

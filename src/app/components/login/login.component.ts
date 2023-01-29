@@ -1,77 +1,61 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { Auth, signInWithPhoneNumber } from '@angular/fire/auth';
-import { WindowService } from '../../services/window.service';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ModalController, ModalOptions } from '@ionic/angular';
+import { OtpComponent } from '../otp/otp.component';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent {
-  windowRef: any;
-  verificationCode: string;
-  user: any;
+export class LoginComponent implements OnInit {
+  form: FormGroup;
 
-  constructor(private auth: Auth, private win: WindowService) {}
+  constructor(
+    private modalCtrl: ModalController,
+    private authService: AuthService
+  ) {}
 
-  ionViewDidEnter() {
-    this.windowRef = this.win.windowRef;
-    this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
-      'recaptcha-container'
-    );
-
-    this.windowRef.recaptchaVerifier.render();
-  }
-
-  sendLoginCode() {
-    const appVerifier = this.windowRef.recaptchaVerifier;
-    const userPhone = document.getElementById('userPhone') as HTMLInputElement;
-
-    const num = userPhone.value;
-
-    firebase
-      .auth()
-      .signInWithPhoneNumber(num, appVerifier)
-      .then((result) => {
-        this.windowRef.confirmationResult = result;
-      })
-      .catch((error) => console.log(error));
-  }
-  verifyLoginCode() {
-    this.windowRef.confirmationResult
-      .confirm(this.verificationCode)
-      .then((result) => {
-        console.log('result verify ', result);
-        this.user = result.user;
-      })
-      .catch((error) => console.log(error, 'Incorrect code entered?'));
-  }
-
-  async registerUsingPhone(phone) {
-    const applicationVerifier = new firebase.auth.RecaptchaVerifier(
-      'recaptcha-container'
-    );
-
-    applicationVerifier.render().then((widgetId) => {
-      console.log('widget id ', widgetId);
+  ngOnInit() {
+    this.form = new FormGroup({
+      phone: new FormControl(null, {
+        validators: [
+          Validators.required,
+          Validators.minLength(5),
+          Validators.maxLength(10),
+        ],
+      }),
     });
-    const confirmationResult = await signInWithPhoneNumber(
-      this.auth,
-      phone,
-      applicationVerifier
-    )
-      .then((confirmationResultat) =>
-        console.log('confirmation result ', confirmationResultat)
-      )
-      .catch((error) => console.log('error sms'));
-
-    console.log('confirmation resulttt ? ', confirmationResult);
   }
-  connect() {
-    const userPhone = document.getElementById('userPhone') as HTMLInputElement;
 
-    this.registerUsingPhone(userPhone.value);
+  async signIn() {
+    console.log('signing in');
+    try {
+      if (!this.form.valid) {
+        this.form.markAllAsTouched();
+        return;
+      }
+      console.log(this.form.value);
+
+      const response = await this.authService.signInWithPhoneNumber(
+        '+33' + this.form.value.phone
+      );
+      console.log(response);
+
+      const options: ModalOptions = {
+        component: OtpComponent,
+        componentProps: {
+          phone: this.form.value.phone,
+        },
+        swipeToClose: true,
+      };
+      const modal = this.modalCtrl.create(options);
+      (await modal).present();
+      const data: any = (await modal).onWillDismiss();
+      console.log(data);
+    } catch (e) {
+      console.log(e);
+    }
   }
 }
