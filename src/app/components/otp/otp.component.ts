@@ -33,7 +33,7 @@ export class OtpComponent implements OnInit {
   async verifyOtp() {
     try {
       const response = await this.auth.verifyOtp(this.otp);
-      console.log('verify otp response ', response);
+      console.log('OTP verified. ', response);
     } catch (e) {
       console.log('verify otp error ', e);
     }

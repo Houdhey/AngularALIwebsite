@@ -53,11 +53,13 @@ export class AuthService {
         this.recaptcha();
       }
       const result = await this.confirmationResult.confirm(otp);
-      console.log(result);
+      console.log('verify otp confirmation result ', result);
       const user = result?.user;
-      console.log(user);
+      // If user.uid -> aller a la route suivante, sinon, retourner à l'accueil
+      //Toaster de message d'erreur
+      console.log('utilisateur ?  ', user);
     } catch (e) {
-      throw e?.message;
+      console.log('error verify otp ? ', e);
     }
   }
 }
