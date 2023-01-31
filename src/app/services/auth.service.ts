@@ -3,6 +3,9 @@ import {
   Auth,
   RecaptchaVerifier,
   signInWithPhoneNumber,
+  setPersistence,
+  inMemoryPersistence,
+  signOut,
 } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
@@ -20,14 +23,6 @@ export class AuthService {
     public modalCtrl: ModalController
   ) {}
 
-  checkUserConnected() {
-    this.auth.onAuthStateChanged((user) => {
-      if (user) {
-        console.log('check user connected ', user);
-      }
-    });
-  }
-
   recaptcha() {
     this.appVerifier = new RecaptchaVerifier(
       'sign-in-button',
@@ -41,10 +36,7 @@ export class AuthService {
       this.auth
     );
   }
-
   async signInWithPhoneNumber(phoneNumber) {
-    const userPhone = document.getElementById('userPhone') as HTMLInputElement;
-
     try {
       if (!this.appVerifier) {
         this.recaptcha();
@@ -60,6 +52,35 @@ export class AuthService {
       throw e;
     }
   }
+  /*  signInWithPhoneNumber(phoneNumber) {
+    const userPhone = document.getElementById('userPhone') as HTMLInputElement;
+    try {
+      if (!this.appVerifier) {
+        this.recaptcha();
+      }
+      setPersistence(this.auth, browserSessionPersistence)
+        .then(() => {
+          // Existing and future Auth states are now persisted in the current
+          // session only. Closing the window would clear any existing state even
+          // if a user forgets to sign out.
+          // ...
+          // New sign-in will be persisted with session persistence.
+
+          return signInWithPhoneNumber(
+            this.auth,
+            phoneNumber,
+            this.appVerifier
+          );
+        })
+        .catch((error) => {
+          // Handle Errors here.
+          const errorCode = error.code;
+          const errorMessage = error.message;
+        });
+    } catch (e) {
+      throw e;
+    }
+  }*/
 
   async verifyOtp(otp) {
     try {
@@ -80,5 +101,9 @@ export class AuthService {
     } catch (e) {
       console.log('error verify otp ? ', e);
     }
+  }
+
+  signOut() {
+    signOut(this.auth);
   }
 }
