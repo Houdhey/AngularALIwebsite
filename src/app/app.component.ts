@@ -32,7 +32,7 @@ export class AppComponent {
         this.router.navigateByUrl('/home');
       } else {
         console.log('User not connected');
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/home');
       }
     });
   }
