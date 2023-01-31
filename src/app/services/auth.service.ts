@@ -4,6 +4,8 @@ import {
   RecaptchaVerifier,
   signInWithPhoneNumber,
 } from '@angular/fire/auth';
+import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +14,19 @@ export class AuthService {
   appVerifier: any;
   confirmationResult: any;
 
-  constructor(private auth: Auth) {}
+  constructor(
+    private auth: Auth,
+    private router: Router,
+    public modalCtrl: ModalController
+  ) {}
+
+  checkUserConnected() {
+    this.auth.onAuthStateChanged((user) => {
+      if (user) {
+        console.log('check user connected ', user);
+      }
+    });
+  }
 
   recaptcha() {
     this.appVerifier = new RecaptchaVerifier(
@@ -57,6 +71,11 @@ export class AuthService {
       const user = result?.user;
       // If user.uid -> aller a la route suivante, sinon, retourner à l'accueil
       //Toaster de message d'erreur
+      if (user.uid) {
+        console.log('user connected ');
+        this.router.navigateByUrl('/home');
+        this.modalCtrl.dismiss();
+      }
       console.log('utilisateur ?  ', user);
     } catch (e) {
       console.log('error verify otp ? ', e);

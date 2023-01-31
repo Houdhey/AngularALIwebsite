@@ -6,11 +6,12 @@ import { HomeComponent } from './components/home/home.component';
 import { NavBarDynamicComponent } from './testFactory/nav-bar-dynamic/nav-bar-dynamic.component';
 import { LoginComponent } from './components/login/login.component';
 import { OtpComponent } from './components/otp/otp.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent,
+    component: HomepageComponent,
   },
   {
     path: '',
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'home-test',
+    component: HomeComponent,
   },
   {
     path: 'quiz',

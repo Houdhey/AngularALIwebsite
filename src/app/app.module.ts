@@ -28,6 +28,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { OtpComponent } from './components/otp/otp.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { OtpComponent } from './components/otp/otp.component';
     NavBarDynamicComponent,
     LoginComponent,
     OtpComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
