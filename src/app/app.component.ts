@@ -29,10 +29,10 @@ export class AppComponent {
       console.log('check user connected ', user);
       if (user) {
         console.log('User still connected');
-        this.router.navigateByUrl('/home');
+        //this.router.navigateByUrl('/home');
       } else {
         console.log('User not connected');
-        this.router.navigateByUrl('/home');
+        //this.router.navigateByUrl('/home');
       }
     });
   }
