@@ -29,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { OtpComponent } from './components/otp/otp.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ScreenTrackingService,
     UserTrackingService,
+    Camera,
   ],
   bootstrap: [AppComponent],
   exports: [],
