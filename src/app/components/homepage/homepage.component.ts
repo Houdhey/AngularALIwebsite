@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-homepage',
@@ -6,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
+  options: AnimationOptions = {
+    path: '/assets/animation.json',
+  };
 
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
+  logOut() {
+    this.router.navigateByUrl('/login');
+  }
 }

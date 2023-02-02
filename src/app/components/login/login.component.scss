@@ -9,17 +9,16 @@
 
 .button-design {
   height: 50px;
-  background: linear-gradient(to right, #2a3a5a, #556387, #3b5197);
-  margin-left: 60px;
-  margin-right: 60px;
-  border-radius: 30px;
+  width: 65%;
+  background: linear-gradient(to bottom, #384db2, #0f81b1, #3da0c0);
+  border-radius: 10px;
   color: white;
   text-align: center;
+  font-family: RotundaLight, serif;
+  font-size: 20px;
   line-height: 50px;
-  font-family: arabetics, serif;
   font-weight: bold;
-  font-size: 30px;
-  box-shadow: 0 7px 10px black;
+  box-shadow: 0 7px 10px #3f89a5;
   cursor: pointer;
 }
 
@@ -76,6 +75,7 @@ input::-moz-placeholder {
   /*styles here*/
   font-family: Kanit, sans-serif;
   font-size: 20px;
+
   font-weight: 400;
 }
 
