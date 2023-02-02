@@ -30,7 +30,12 @@ import { NgOtpInputModule } from 'ng-otp-input';
 import { OtpComponent } from './components/otp/otp.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { Camera } from '@ionic-native/camera/ngx';
+import player from 'lottie-web';
+import { LottieModule } from 'ngx-lottie';
 
+// Note we need a separate function as it's required
+// by the AOT compiler.
+export const playerFactory = () => player;
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +64,7 @@ import { Camera } from '@ionic-native/camera/ngx';
     provideStorage(() => getStorage()),
     FormsModule,
     ReactiveFormsModule,
+    LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
