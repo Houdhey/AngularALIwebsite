@@ -10,52 +10,37 @@
     background: linear-gradient(to bottom, #384db2, #0f81b1, #3da0c0);
   "
 >
+  <div class="circle-header"></div>
+
+  <div style="text-align: center; margin-top: 300px">
+    <img
+      style="
+        height: 300px;
+        width: 300px;
+        border: 10px solid #fff0af;
+        border-radius: 10px;
+      "
+      src="assets/qrcode.png"
+    />
+  </div>
+
   <div
     style="
+      margin-top: 95px;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding-left: 16px;
-      padding-right: 16px;
-      justify-content: space-between;
-      height: 120px;
-      background-color: white;
-      border-radius: 20px;
-      margin: 16px;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      font-family: RotundaLight, serif;
+      font-size: 20px;
     "
   >
-    <div
-      style="
-        height: 60px;
-        width: 60px;
-        border-radius: 30px;
-        background-image: url('assets/navbar-icons/woman.png');
-        background-size: cover;
-        border: 3px solid black;
-        background-color: #ffbc8a;
-      "
-    ></div>
-    <div
-      style="
-        font-family: CocoGooseMedium, serif;
-        font-size: 20px;
-        text-align: center;
-        color: black;
-      "
-    >
-      Bienvenue Jhon Rachid
-    </div>
-  </div>
-  <div>
-    <img style="height: 200px; width: 200px" src="assets/qrcode.png" />
+    <div style="">Scannez le QR Code</div>
+    <div>pour consulter vos cotisations</div>
   </div>
 
   <!--  <div style="height: 50vh">
     <ng-lottie [options]="lottieConfig"></ng-lottie>
   </div>-->
-
-  <div>Montrez ce QR Code aux responsables,</div>
-  <div>Ils vous mettront à jour sur vos cotisations</div>
 </div>
-
-<app-nav-bar-dynamic></app-nav-bar-dynamic>
