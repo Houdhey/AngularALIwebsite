@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-homepage',
@@ -8,11 +7,15 @@ import { AnimationOptions } from 'ngx-lottie';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
-  options: AnimationOptions = {
-    path: '/assets/animation.json',
-  };
+  lottieConfig;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.lottieConfig = {
+      path: 'assets/lotties/scanner.json',
+      autoplay: true,
+      loop: true,
+    };
+  }
 
   ngOnInit() {}
 
