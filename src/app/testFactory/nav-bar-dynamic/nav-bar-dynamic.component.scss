@@ -1,11 +1,12 @@
 .container {
   background: #eac9aa;
-  width: 103%;
+  width: 90%;
   height: 75px;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
-  bottom: 0;
+  bottom: 20px;
+  border-radius: 25px;
 }
 .icon-1 {
   transition-duration: 0.7s;

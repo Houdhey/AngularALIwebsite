@@ -8,11 +8,12 @@
   style="
     height: 100%;
     background: linear-gradient(to bottom, #384db2, #0f81b1, #3da0c0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   "
 >
-  <div class="circle-header"></div>
-
-  <div style="text-align: center; margin-top: 230px">
+  <div style="text-align: center">
     <qrcode
       [qrdata]="'www.google.fr'"
       [width]="300"
@@ -23,7 +24,6 @@
 
   <div
     style="
-      margin-top: 75px;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -31,6 +31,7 @@
       color: white;
       font-family: RotundaLight, serif;
       font-size: 20px;
+      margin-top: 50px;
     "
   >
     <div style="">Scannez le QR Code</div>

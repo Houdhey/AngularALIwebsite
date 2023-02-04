@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class NavBarDynamicComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.clickScanner();
+  }
 
-  funcHouse() {
+  clickZakat() {
     const house = document.getElementById('icon-1') as HTMLInputElement;
     const person = document.getElementById('icon-2') as HTMLInputElement;
     const mail = document.getElementById('icon-3') as HTMLInputElement;
@@ -44,7 +46,7 @@ export class NavBarDynamicComponent implements OnInit {
     house.style.transitionDuration = '0.7s';
   }
 
-  funcBell() {
+  clickProfile() {
     const house = document.getElementById('icon-1') as HTMLInputElement;
     const person = document.getElementById('icon-2') as HTMLInputElement;
     const mail = document.getElementById('icon-3') as HTMLInputElement;
@@ -78,7 +80,7 @@ export class NavBarDynamicComponent implements OnInit {
     bell.style.transitionDuration = '0.7s';
   }
 
-  funcMail() {
+  clickScanner() {
     const house = document.getElementById('icon-1') as HTMLInputElement;
     const person = document.getElementById('icon-2') as HTMLInputElement;
     const mail = document.getElementById('icon-3') as HTMLInputElement;
