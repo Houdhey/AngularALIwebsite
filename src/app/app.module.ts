@@ -32,6 +32,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { Camera } from '@ionic-native/camera/ngx';
 import player from 'lottie-web';
 import { LottieModule } from 'ngx-lottie';
+import { QRCodeModule } from 'angularx-qrcode';
 
 // Note we need a separate function as it's required
 // by the AOT compiler.
@@ -65,6 +66,7 @@ export const playerFactory = () => player;
     FormsModule,
     ReactiveFormsModule,
     LottieModule.forRoot({ player: playerFactory }),
+    QRCodeModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
