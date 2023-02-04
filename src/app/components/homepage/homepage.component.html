@@ -12,21 +12,18 @@
 >
   <div class="circle-header"></div>
 
-  <div style="text-align: center; margin-top: 300px">
-    <img
-      style="
-        height: 300px;
-        width: 300px;
-        border: 10px solid #e7d28c;
-        border-radius: 10px;
-      "
-      src="assets/qrcode.png"
-    />
+  <div style="text-align: center; margin-top: 230px">
+    <qrcode
+      [qrdata]="'www.google.fr'"
+      [width]="300"
+      [imageHeight]="300"
+      [errorCorrectionLevel]="'M'"
+    ></qrcode>
   </div>
 
   <div
     style="
-      margin-top: 95px;
+      margin-top: 75px;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -44,3 +41,4 @@
     <ng-lottie [options]="lottieConfig"></ng-lottie>
   </div>-->
 </div>
+<app-nav-bar-dynamic></app-nav-bar-dynamic>
