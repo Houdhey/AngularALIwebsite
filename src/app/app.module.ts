@@ -33,6 +33,7 @@ import { Camera } from '@ionic-native/camera/ngx';
 import player from 'lottie-web';
 import { LottieModule } from 'ngx-lottie';
 import { QRCodeModule } from 'angularx-qrcode';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 // Note we need a separate function as it's required
 // by the AOT compiler.
@@ -50,6 +51,7 @@ export const playerFactory = () => player;
     LoginComponent,
     OtpComponent,
     HomepageComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,
