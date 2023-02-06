@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar-dynamic',
@@ -6,11 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar-dynamic.component.scss'],
 })
 export class NavBarDynamicComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit() {
-    this.clickScanner();
-  }
+  ngOnInit() {}
 
   clickZakat() {
     const house = document.getElementById('icon-1') as HTMLInputElement;
@@ -44,6 +43,8 @@ export class NavBarDynamicComponent implements OnInit {
 
     activated.style.transitionDuration = '0.7s';
     house.style.transitionDuration = '0.7s';
+
+    this.router.navigateByUrl('/cotisations');
   }
 
   clickProfile() {
@@ -112,5 +113,6 @@ export class NavBarDynamicComponent implements OnInit {
 
     activated.style.transitionDuration = '0.7s';
     mail.style.transitionDuration = '0.7s';
+    this.router.navigateByUrl('/home');
   }
 }

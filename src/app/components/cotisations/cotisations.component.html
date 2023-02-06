@@ -1,0 +1,53 @@
+<!--<div
+  style="
+    height: 100%;
+    background: linear-gradient(to top, #f9ad83, #ee957b, #e38073);
+  "
+></div>-->
+<div
+  style="
+    height: 100%;
+    background: linear-gradient(to bottom, #384db2, #0f81b1, #3da0c0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  "
+>
+  <div
+    style="
+      border: 5px solid #eac9aa;
+      border-radius: 10px;
+      background-color: white;
+      margin: 16px;
+    "
+  >
+    <qrcode
+      [margin]="2"
+      [qrdata]="'www.google.fr'"
+      [width]="350"
+      [imageHeight]="350"
+      [errorCorrectionLevel]="'M'"
+    ></qrcode>
+  </div>
+
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      font-family: RotundaLight, serif;
+      font-size: 20px;
+      margin-top: 50px;
+    "
+  >
+    <div style="">Scannez le QR Code</div>
+    <div>pour consulter vos cotisations</div>
+  </div>
+
+  <!--  <div style="height: 50vh">
+    <ng-lottie [options]="lottieConfig"></ng-lottie>
+  </div>-->
+</div>
+<app-nav-bar-dynamic></app-nav-bar-dynamic>

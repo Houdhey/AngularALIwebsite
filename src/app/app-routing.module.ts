@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { OtpComponent } from './components/otp/otp.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { CotisationsComponent } from './components/cotisations/cotisations.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'cotisations',
+    component: CotisationsComponent,
   },
   {
     path: 'home-test',
