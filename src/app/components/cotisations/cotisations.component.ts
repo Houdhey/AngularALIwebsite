@@ -47,19 +47,11 @@ export class CotisationsComponent implements OnInit {
       pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
+        dynamicBullets: true,
       },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-      virtual: {
-        slides: (() => {
-          const slides = [];
-          for (let i = 0; i < 10; i += 1) {
-            slides.push('Slide ' + (i + 1));
-          }
-          return slides;
-        })(),
       },
     });
   }
