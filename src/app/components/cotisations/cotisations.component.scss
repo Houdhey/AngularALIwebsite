@@ -35,3 +35,37 @@
   transform: translate3d(0, 0, 0);
   z-index: 10;
 }
+
+.swiper-style-active {
+  background-color: red;
+}
+
+.swiper-button-next {
+  background-image: url("../../../assets/icon/nextArrow.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  background-image: url("../../../assets/icon/previous.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-slide-active {
+  background-color: red;
+}

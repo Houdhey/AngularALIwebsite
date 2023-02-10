@@ -64,7 +64,7 @@ export class CotisationsComponent implements OnInit {
     this.swiper = new Swiper('.swiper', {
       slidesPerView: 3,
       centeredSlides: true,
-      spaceBetween: 30,
+      spaceBetween: 20,
       pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
@@ -80,5 +80,9 @@ export class CotisationsComponent implements OnInit {
   onClickMonth(month) {
     console.log('month clicked ? ', month);
     this.swiper.slideTo(month - 1);
+    console.log(this.swiper.activeIndex);
+    if (this.swiper.activeIndex === month - 1) {
+      console.log('current index ');
+    }
   }
 }
