@@ -62,9 +62,9 @@ export class CotisationsComponent implements OnInit {
 
   ngOnInit() {
     this.swiper = new Swiper('.swiper', {
-      slidesPerView: 3,
+      slidesPerView: 2,
       centeredSlides: true,
-      spaceBetween: 20,
+      spaceBetween: 30,
       pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
