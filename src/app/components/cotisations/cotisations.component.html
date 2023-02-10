@@ -12,18 +12,13 @@
 >
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Janvier</div>
-      <div class="swiper-slide">Février</div>
-      <div class="swiper-slide">Mars</div>
-      <div class="swiper-slide">Avril</div>
-      <div class="swiper-slide">Mai</div>
-      <div class="swiper-slide">Juin</div>
-      <div class="swiper-slide">Juillet</div>
-      <div class="swiper-slide">Août</div>
-      <div class="swiper-slide">Septembre</div>
-      <div class="swiper-slide">Octobre</div>
-      <div class="swiper-slide">Novembre</div>
-      <div class="swiper-slide">Décembre</div>
+      <div
+        class="swiper-slide"
+        (click)="onClickMonth(month.id)"
+        *ngFor="let month of months; let i = index"
+      >
+        {{ month.name }}
+      </div>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>

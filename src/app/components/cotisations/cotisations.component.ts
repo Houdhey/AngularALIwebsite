@@ -7,34 +7,55 @@ import { Swiper } from 'swiper';
   styleUrls: ['./cotisations.component.scss'],
 })
 export class CotisationsComponent implements OnInit {
-  appendNumber = 600;
-  prependNumber = 1;
-
   swiper;
-  images: Array<object> = [
+  months = [
     {
-      src: 'https://loremflickr.com/g/600/400/paris',
-      alt: 'Image 1',
+      id: '1',
+      name: 'January',
     },
     {
-      src: 'https://loremflickr.com/600/400/brazil,rio',
-      alt: 'Image 2',
+      id: '2',
+      name: 'February',
     },
     {
-      src: 'https://loremflickr.com/600/400/paris,girl/all',
-      alt: 'Image 3',
+      id: '3',
+      name: 'March',
     },
     {
-      src: 'https://loremflickr.com/600/400/brazil,rio',
-      alt: 'Image 4',
+      id: '4',
+      name: 'April',
     },
     {
-      src: 'https://loremflickr.com/600/400/paris,girl/all',
-      alt: 'Image 5',
+      id: '5',
+      name: 'May',
     },
     {
-      src: 'https://loremflickr.com/600/400/brazil,rio',
-      alt: 'Image 6',
+      id: '6',
+      name: 'June',
+    },
+    {
+      id: '7',
+      name: 'July',
+    },
+    {
+      id: '8',
+      name: 'August',
+    },
+    {
+      id: '9',
+      name: 'September',
+    },
+    {
+      id: '10',
+      name: 'October',
+    },
+    {
+      id: '11',
+      name: 'November',
+    },
+    {
+      id: '12',
+      name: 'December',
     },
   ];
   constructor() {}
@@ -54,5 +75,10 @@ export class CotisationsComponent implements OnInit {
         prevEl: '.swiper-button-prev',
       },
     });
+  }
+
+  onClickMonth(month) {
+    console.log('month clicked ? ', month);
+    this.swiper.slideTo(month - 1);
   }
 }
