@@ -12,6 +12,7 @@ export class CotisationsComponent implements OnInit {
     {
       id: '1',
       name: 'January',
+      image: 'assets/months/arbre-dhiver.png',
     },
     {
       id: '2',
@@ -60,7 +61,7 @@ export class CotisationsComponent implements OnInit {
   ];
   constructor() {}
 
-  ngOnInit() {
+  ionViewWillEnter() {
     this.swiper = new Swiper('.swiper', {
       slidesPerView: 2,
       centeredSlides: true,
@@ -76,6 +77,7 @@ export class CotisationsComponent implements OnInit {
       },
     });
   }
+  ngOnInit() {}
 
   onClickMonth(month) {
     console.log('month clicked ? ', month);

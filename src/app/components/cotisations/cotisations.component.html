@@ -10,7 +10,7 @@
     height: 100%;
   "
 >
-  <div class="swiper" style="padding-right: 16px; padding-left: 16px">
+  <div class="swiper" style="padding: 16px">
     <div class="swiper-wrapper" style="align-items: center">
       <div
         class="swiper-slide"
@@ -18,13 +18,20 @@
         *ngFor="let month of months; let i = index"
       >
         <div style="display: flex; flex-direction: column; align-items: center">
-          <div style="font-family: RotundaLight, serif; font-size: 30px">
+          <div
+            style="
+              font-family: RotundaLight, serif;
+              font-size: 30px;
+              margin-top: 20px;
+            "
+          >
             {{ month.name }}
           </div>
-          <div>Image</div>
+
           <div style="display: flex; flex-direction: row">
-            <div>Statut :</div>
-            <div>Image statut</div>
+            <div style="height: 60px; width: 60px; margin-top: 30px">
+              <img src="assets/months/check-mark.png" />
+            </div>
           </div>
         </div>
       </div>

@@ -27,6 +27,7 @@ export class AppComponent {
       });
     this.auth.onAuthStateChanged((user) => {
       console.log('check user connected ', user);
+      console.log(user.uid);
       if (user) {
         console.log('User still connected');
         //this.router.navigateByUrl('/home');
