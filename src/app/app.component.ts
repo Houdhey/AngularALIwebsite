@@ -3,6 +3,7 @@ import { Auth, inMemoryPersistence } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { getDatabase } from 'firebase/database';
 import { ref, set } from '@angular/fire/database';
+import { getFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { ref, set } from '@angular/fire/database';
 })
 export class AppComponent {
   constructor(private auth: Auth, private router: Router) {
+    console.log('get firestore ', getFirestore());
     this.auth
       .setPersistence(inMemoryPersistence)
       .then(() => {
@@ -27,19 +29,21 @@ export class AppComponent {
         const errorCode = error.code;
         const errorMessage = error.message;
       });
+
     this.auth.onAuthStateChanged((user) => {
       console.log('check user connected ', user);
-      console.log(user.uid);
       const database = getDatabase();
       const userToSave = {
         name: 'Houdheyfa',
-        phone: user.phoneNumber,
-        uid: user.uid,
+        phone: '6599595',
+        uid: 'ikURIzGJtQhzkWQ3o1MJVfvWImt2',
       };
+      console.log('database ? ', database);
       set(ref(database, 'users/' + userToSave.uid), userToSave)
         .then((result) => console.log('set ref database ', result))
         .catch((error) => console.log('set ref error ', error))
         .finally(() => console.log('et bah alors'));
+
       if (user) {
         console.log('User still connected');
         //this.router.navigateByUrl('/home');

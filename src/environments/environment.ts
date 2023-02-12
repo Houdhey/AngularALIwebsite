@@ -11,6 +11,8 @@ export const environment = {
     messagingSenderId: '434393107997',
     appId: '1:434393107997:web:69830cc4a03af1bfe200f4',
     measurementId: 'G-96HHE4V1WW',
+    databaseURL:
+      'https://masjidacmal-default-rtdb.europe-west1.firebasedatabase.app/',
   },
   production: false,
 };
