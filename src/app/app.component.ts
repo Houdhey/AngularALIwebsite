@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Auth, inMemoryPersistence } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { getDatabase } from 'firebase/database';
+import { ref, set } from '@angular/fire/database';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +30,16 @@ export class AppComponent {
     this.auth.onAuthStateChanged((user) => {
       console.log('check user connected ', user);
       console.log(user.uid);
+      const database = getDatabase();
+      const userToSave = {
+        name: 'Houdheyfa',
+        phone: user.phoneNumber,
+        uid: user.uid,
+      };
+      set(ref(database, 'users/' + userToSave.uid), userToSave)
+        .then((result) => console.log('set ref database ', result))
+        .catch((error) => console.log('set ref error ', error))
+        .finally(() => console.log('et bah alors'));
       if (user) {
         console.log('User still connected');
         //this.router.navigateByUrl('/home');
