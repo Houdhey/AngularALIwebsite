@@ -39,6 +39,11 @@ export class AppComponent {
         uid: 'ikURIzGJtQhzkWQ3o1MJVfvWImt2',
       };
       console.log('database ? ', database);
+
+      set(ref(database, 'messages/'), {
+        sender: 'eeee',
+        message: 'bbbb',
+      });
       set(ref(database, 'users/' + userToSave.uid), userToSave)
         .then((result) => console.log('set ref database ', result))
         .catch((error) => console.log('set ref error ', error))
