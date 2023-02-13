@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-nav-bar-dynamic',
@@ -7,11 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav-bar-dynamic.component.scss'],
 })
 export class NavBarDynamicComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (this.authService.isUserLoggedIn) {
+      this.clickScanner();
+    }
+  }
 
-  clickZakat() {
+  clickCotisations() {
     const house = document.getElementById('icon-1') as HTMLInputElement;
     const person = document.getElementById('icon-2') as HTMLInputElement;
     const mail = document.getElementById('icon-3') as HTMLInputElement;

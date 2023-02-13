@@ -23,9 +23,20 @@ export class AppComponent {
 
       if (user) {
         const userToSave = {
-          name: 'Houdheyfa',
+          firstName: 'Houdheyfa',
+          lastName: 'Bouzid',
           phone: user.phoneNumber,
           uid: user.uid,
+          2023: {
+            january: true,
+            february: true,
+            march: false,
+          },
+          2022: {
+            january: true,
+            february: true,
+            march: false,
+          },
         };
         console.log('User still connected', user.uid);
         set(ref(database, 'users/' + userToSave.uid), userToSave)

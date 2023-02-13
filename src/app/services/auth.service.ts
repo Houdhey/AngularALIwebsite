@@ -17,6 +17,7 @@ export class AuthService {
   appVerifier: any;
   confirmationResult: any;
 
+  isUserLoggedIn = false;
   userPrenom;
   userNom;
 
@@ -98,6 +99,7 @@ export class AuthService {
       if (user.uid) {
         console.log('user connected ');
         this.router.navigateByUrl('/home');
+        this.isUserLoggedIn = true;
         this.modalCtrl.dismiss();
       }
       console.log('utilisateur ?  ', user);
@@ -108,5 +110,6 @@ export class AuthService {
 
   signOut() {
     signOut(this.auth);
+    this.isUserLoggedIn = false;
   }
 }
