@@ -24,7 +24,7 @@ export class AppComponent {
       if (user) {
         const userToSave = {
           name: 'Houdheyfa',
-          phone: '6599595',
+          phone: user.phoneNumber,
           uid: user.uid,
         };
         console.log('User still connected', user.uid);

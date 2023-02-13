@@ -17,6 +17,9 @@ export class AuthService {
   appVerifier: any;
   confirmationResult: any;
 
+  userPrenom;
+  userNom;
+
   constructor(
     private auth: Auth,
     private router: Router,
