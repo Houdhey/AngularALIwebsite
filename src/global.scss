@@ -113,3 +113,15 @@
   font-family: Montserrat-Regular;
   src: url(assets/fonts/montserrat/Montserrat-Regular.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("assets/fonts/NotoSansArabic-Bold.woff2") format("woff2"),
+    url("assets/fonts/NotoSansArabic-Bold.woff") format("woff"),
+    url("assets/fonts/NotoSansArabic-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Khebrat";
+  src: url("assets/fonts/Khebrat.ttf") format("truetype");
+}
