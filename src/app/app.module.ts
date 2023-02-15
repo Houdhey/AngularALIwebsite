@@ -35,6 +35,7 @@ import { LottieModule } from 'ngx-lottie';
 import { QRCodeModule } from 'angularx-qrcode';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { CotisationsComponent } from './components/cotisations/cotisations.component';
+import { HeaderComponent } from './components/header/header.component';
 
 // Note we need a separate function as it's required
 // by the AOT compiler.
@@ -54,6 +55,7 @@ export const playerFactory = () => player;
     HomepageComponent,
     CalendarComponent,
     CotisationsComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
