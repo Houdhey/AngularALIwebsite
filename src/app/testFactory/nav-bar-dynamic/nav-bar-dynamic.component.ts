@@ -84,6 +84,7 @@ export class NavBarDynamicComponent implements OnInit {
 
     activated.style.transitionDuration = '0.7s';
     bell.style.transitionDuration = '0.7s';
+    this.router.navigateByUrl('/login');
   }
 
   clickScanner() {
