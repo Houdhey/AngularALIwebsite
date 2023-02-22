@@ -36,6 +36,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { CotisationsComponent } from './components/cotisations/cotisations.component';
 import { HeaderComponent } from './components/header/header.component';
+import { Navbar3Component } from './testFactory/navbar3/navbar3.component';
 
 // Note we need a separate function as it's required
 // by the AOT compiler.
@@ -56,6 +57,7 @@ export const playerFactory = () => player;
     CalendarComponent,
     CotisationsComponent,
     HeaderComponent,
+    Navbar3Component,
   ],
   imports: [
     BrowserModule,
