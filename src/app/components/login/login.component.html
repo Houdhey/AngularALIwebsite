@@ -2,15 +2,17 @@
   style="
     background: linear-gradient(to bottom, #384db2, #0f81b1, #3da0c0);
     height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 300px;
   "
 >
   <div class="circle-header"></div>
 
-  <div class="title-text" style="margin-top: 300px">
+  <div class="title-text" style="margin-top: 200px">
     <img width="300px" height="200px" src="assets/icon/logoMasjid.png" />
   </div>
 
-  <form [formGroup]="form">
+  <form [formGroup]="form" >
     <div id="sign-in-button"></div>
     <div style="display: flex; justify-content: center">
       <input
